@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCT Book List</title>
+
+  <!------------------------ Custom CSS -------------------------->
+  <link rel="stylesheet" href="Asset/CSS/style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <header>
+      <h1 class="h1">Add Book</h1>
+    </header>
+    <div class="card">
+      <div class="card-body">
+        <form action="#" id="book-form">
+          <div class="form-group">
+            <label for="title" class="paragraph">Book Title</label>
+            <input type="text" name="title" id="book-title">
+          </div>
+          <div class="form-group">
+            <label for="title" class="paragraph">Author</label>
+            <input type="text" name="title" id="book-author">
+          </div>
+          <div class="form-group">
+            <label for="title" class="paragraph">ISBN</label>
+            <input type="text" name="title" id="book-issue">
+          </div>
+          <input type="submit" class="btn-secondary" value="Submit">
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <table id="book-table">
+          <thead>
+            <tr>
+              <th class="h4">Title</th>
+              <th class="h4">Author</th>
+              <th class="h4">ISBN</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-section">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------- Custom JS ------------------------>
+  <script src="Asset/JS/app.js"></script>
+  <!--<script src="Asset/JS/appES6.js"></script>-->
+</body>
+</html>
