@@ -9,6 +9,9 @@
 /* Custom Variables */
 
 :root {
+  --primary-color: rgb(31, 40, 51);
+  --primary-Acolor: rgba(31, 40, 51, 0.4);
+  --secondary-color: rgb(102, 252, 241);
   --base-size: 1.05rem;
   --type-scale: 1.15;
   --paragraph: calc(var(--base-size) * var(--type-scale));
@@ -25,6 +28,9 @@ html {
 
 body {
   font-size: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: 1rem;
 }
 
@@ -37,7 +43,7 @@ body {
   margin-right: auto;
 }
 
-.card {
+div.card {
   width: 100%;
 }
 
@@ -77,6 +83,7 @@ body {
 .btn-secondary {
   background-color: #333;
   color: #fff;
+  border: 0.1rem solid var(--secondary-color);
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
@@ -110,11 +117,11 @@ h1 span {
 h1 span:first-child {
   animation-name: left-header;
   animation-duration: 4s;
-  animation-timing-function: linear;
+  animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
   transform-origin: bottom left;
   -webkit-animation-name: left-header;
   -webkit-animation-duration: 4s;
-  -webkit-animation-timing-function: linear;
+  -webkit-animation-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
   -webkit-transform-origin: bottom left;
 }
 
@@ -132,13 +139,15 @@ h1 span:last-child {
 @keyframes left-header {
   0% {
     transform: scale(1.5);
+    animation-timing-function: linear;
   }
 
   15% {
     transform: scale(0.5);
+    animation-timing-function: linear;
   }
   25% {
-    
+    animation-timing-function: linear;
     transform: scale(1);
   }
   25%, 43% {
@@ -201,14 +210,20 @@ h1 span:last-child {
   0% {
     transform: scale(1.5);
     -webkit-transform: scale(1.5);
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
   }
   15% {
     transform: scale(0.5);
     -webkit-transform: scale(0.5);
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
   }
   25% {
     transform: scale(1);
     -webkit-transform: scale(1);
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
   }
   25%, 43% {
     transform: rotateZ(-12deg);
@@ -303,6 +318,45 @@ table {
 
 tr {
   text-align: left;
+}
+
+.book-list {
+  animation-name: book-popup;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  background-color: #fff;
+  color: #333;
+}
+
+.book-list:nth-child(even) {
+  background-color: rgb(236, 236, 236);
+}
+
+@keyframes book-popup {
+  0% {
+    transform: scale(0);
+  }
+  5% {
+    transform: scale(1.1) translateY(1.5rem);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@-webkit-keyframes book-popup {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  5% {
+    transform: scale(1.1) translateY(1.5rem);
+    -webkit-transform: scale(1.1) translateY(1.5rem);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    -webkit-transform: scale(1) translateY(0);
+  }
 }
 
 .alert {
