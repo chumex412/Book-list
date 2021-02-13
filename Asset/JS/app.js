@@ -14,7 +14,7 @@ UI.prototype.addBookToList = function(book) {
 
   // Create div
   const tr = document.createElement('tr');
-  tr.className = 'paragraph';
+  tr.className = 'paragraph book-list';
   tr.innerHTML = `
     <td>${book.title}</td>
     <td>${book.author}</td>

@@ -14,7 +14,7 @@ class UI {
 
     // Create Table row
     const tr = document.createElement('tr');
-    tr.className = 'paragraph';
+    tr.className = 'paragraph book-list';
     tr.innerHTML = `
       <td>${book.title}</td>
       <td>${book.author}</td>
